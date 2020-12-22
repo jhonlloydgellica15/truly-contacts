@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Button, Form, Grid, Header as SemanticHeader, Message, Segment } from "semantic-ui-react";
 import Header from "../../components/Header";
 
@@ -23,6 +24,9 @@ const LoginUi = ({ form: { onChange, form, loginFormValid, error, onSubmit, load
               <Button onClick={onSubmit} disabled={loginFormValid || loading} fluid loading={loading} primary type="submit">
                 Submit
               </Button>
+              <Segment>
+                Need an account <Link to="/auth/register">Register</Link>
+              </Segment>
             </Form>
           </Segment>
         </Grid.Column>
