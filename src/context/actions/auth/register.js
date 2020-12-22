@@ -16,7 +16,7 @@ export const register = ({ email, password, username, lastName: last_name, first
     .catch((err) => {
       dispatch({
         type: REGISTER_ERROR,
-        payload: err.response.data,
+        payload: err.response ? err.response.data : "COULD NOT CONNECT",
       });
     });
 };
